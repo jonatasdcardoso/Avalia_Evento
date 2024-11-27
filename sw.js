@@ -1,11 +1,9 @@
-// sw.js
 const CACHE_NAME = 'avaliacao-eventos-cache-v1';
 const urlsToCache = [
   'index.html',
   'style.css',
   'script.js',
   'manifest.json',
-  // Outros arquivos estáticos...
 ];
 
 self.addEventListener('install', function(event) {
