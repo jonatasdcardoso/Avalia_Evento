@@ -1,6 +1,7 @@
 const iniciarBtn = document.getElementById('iniciarBtn');
 const avaliacaoDiv = document.getElementById('avaliacao');
 const mensagemDiv = document.getElementById('mensagem');
+const fullscreenBtn = document.getElementById('fullscreenBtn');
 const encerrarBtn = document.getElementById('encerrarBtn');
 const opcoesBtns = document.querySelectorAll('.opcao');
 const nomeEventoInput = document.getElementById('nomeEvento'); 
@@ -50,6 +51,17 @@ opcoesBtns.forEach(btn => {
     }, 2000);
   });
 });
+
+
+fullscreenBtn.addEventListener('click', () => {
+  if (document.fullscreenElement) {
+    document.exitFullscreen();
+  } else {
+    document.documentElement.requestFullscreen();
+  }
+});
+
+
 
 encerrarBtn.addEventListener('click', () => {
   const senhaDigitada = prompt("Digite a senha para encerrar o evento:");
